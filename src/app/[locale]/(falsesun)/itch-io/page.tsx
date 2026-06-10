@@ -8,9 +8,9 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return buildGuideMetadata('download', locale, '/download');
+  return buildGuideMetadata('itch-io', locale, '/itch-io');
 }
 
-export default function DownloadPage() {
-  return renderGuidePage('download', '/download');
+export default function ItchIoPage() {
+  return renderGuidePage('itch-io', '/itch-io');
 }

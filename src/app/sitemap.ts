@@ -14,13 +14,14 @@ const coreRoutes = [
   Routes.ContentWarnings,
   Routes.Guides,
   Routes.Download,
+  Routes.ItchIo,
   Routes.PrivacyPolicy,
   Routes.TermsOfService,
   Routes.CookiePolicy,
   Routes.Disclaimer,
 ];
 
-const stableLastModified = new Date('2026-06-08T00:00:00.000Z');
+const stableLastModified = new Date('2026-06-10T00:00:00.000Z');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapList: MetadataRoute.Sitemap = [];
@@ -47,7 +48,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               ? 0.95
               : route === Routes.AllEndings ||
                   route === Routes.Ending20 ||
-                  route === Routes.Download
+                  route === Routes.Download ||
+                  route === Routes.ItchIo
                 ? 0.9
                 : 0.8,
       });

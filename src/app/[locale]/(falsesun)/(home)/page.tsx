@@ -13,7 +13,7 @@ export async function generateMetadata({
   return constructMetadata({
     title: 'The False Sun - Walkthrough, All Endings & Route Guide',
     description:
-      'The False Sun guide with all endings, Ending 20, Silas route, Kyle route, play online, mini-games, official download help, and mature-content warnings.',
+      'The False Sun guide for all endings, Ending 20, Silas and Kyle routes, play online, mini-games, official itch.io downloads, and content warnings.',
     locale,
     pathname: '',
     image:

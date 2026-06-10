@@ -333,6 +333,7 @@
         "items": {
           "all": "All Guides",
           "download": "Download Guide",
+          "itchIo": "itch.io Page",
           "contentWarnings": "Content Warnings",
           "disclaimer": "Disclaimer"
         }

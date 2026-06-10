@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import { endingChecklist } from '@/data/falsesun/endings';
 import { featuredGuides, siteDescription } from '@/data/falsesun/guides';
 import {
-  checkedAt,
   contentWarnings,
   gameFacts,
   keywordMatrix,
@@ -76,6 +75,12 @@ const secondaryLinks = [
     icon: Download,
   },
   {
+    title: 'itch.io Page',
+    href: '/itch-io',
+    body: 'Official Oniray page, included files, comments, and safe access notes.',
+    icon: Download,
+  },
+  {
     title: 'Content Warnings',
     href: '/content-warnings',
     body: 'Spoiler-light mature-audience and safety notes.',
@@ -83,7 +88,29 @@ const secondaryLinks = [
   },
 ];
 
+const routeLabels: Record<string, string> = {
+  '/': 'Game overview',
+  '/all-endings': 'All endings walkthrough',
+  '/ending-20': 'Ending 20 route',
+  '/guides': 'Guide index',
+  '/play-online': 'Play online',
+  '/silas-route': 'Silas route',
+  '/kyle-route': 'Kyle route',
+  '/mini-games': 'Mini-games',
+  '/download': 'Download guide',
+  '/itch-io': 'Official itch.io page',
+  '/content-warnings': 'Content warnings',
+};
+
 export function FalseSunHomePage() {
+  const coreRouteItems = keywordMatrix
+    .filter((item) => item.status === 'keep')
+    .filter(
+      (item, index, items) =>
+        items.findIndex((candidate) => candidate.route === item.route) === index
+    )
+    .slice(0, 6);
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -156,11 +183,20 @@ export function FalseSunHomePage() {
                   Play online
                 </LocaleLink>
               </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="border-[#E7C77C] bg-[#0A0F0C]/50 text-[#F7E8C9] hover:bg-[#1B231D]"
+              >
+                <LocaleLink href="/itch-io">
+                  <Download className="size-4" />
+                  Official itch.io
+                </LocaleLink>
+              </Button>
             </div>
             <p className="text-sm leading-6 text-[#C7BAA7]">
-              Checked {checkedAt}. This fan site covers Oniray&apos;s visual
-              novel, not the unrelated book/comic search results using the same
-              phrase.
+              This fan site covers Oniray&apos;s visual novel, not unrelated
+              book, comic, or Risk of Rain search results using similar words.
             </p>
           </div>
 
@@ -202,7 +238,7 @@ export function FalseSunHomePage() {
               warnings.
             </p>
           </div>
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             {secondaryLinks.map((item) => (
               <LocaleLink
                 key={item.href}
@@ -343,34 +379,31 @@ export function FalseSunHomePage() {
 
           <div className="rounded-lg border border-[#493A34] bg-[#111612] p-6">
             <h2 className="font-display text-2xl font-bold">
-              Search demand handled
+              Find the right walkthrough page
             </h2>
             <div className="mt-5 grid gap-3">
-              {keywordMatrix
-                .filter((item) => item.status === 'keep')
-                .slice(0, 6)
-                .map((item) => (
-                  <LocaleLink
-                    key={item.keyword}
-                    href={item.route}
-                    className="rounded-md border border-[#493A34] bg-[#0D1310] p-4 transition hover:border-[#D9B56A]"
-                  >
-                    <div className="flex flex-wrap items-center gap-2">
-                      <Badge
-                        variant="outline"
-                        className="border-[#D9B56A]/60 text-[#F7E8C9]"
-                      >
-                        {item.priority}
-                      </Badge>
-                      <span className="text-sm font-semibold">
-                        {item.keyword}
-                      </span>
-                    </div>
-                    <p className="mt-2 text-sm leading-6 text-[#C7BAA7]">
-                      {item.intent}
-                    </p>
-                  </LocaleLink>
-                ))}
+              {coreRouteItems.map((item) => (
+                <LocaleLink
+                  key={item.keyword}
+                  href={item.route}
+                  className="rounded-md border border-[#493A34] bg-[#0D1310] p-4 transition hover:border-[#D9B56A]"
+                >
+                  <div className="flex flex-wrap items-center gap-2">
+                    <Badge
+                      variant="outline"
+                      className="border-[#D9B56A]/60 text-[#F7E8C9]"
+                    >
+                      {item.priority}
+                    </Badge>
+                    <span className="text-sm font-semibold">
+                      {routeLabels[item.route] ?? item.keyword}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-[#C7BAA7]">
+                    {item.intent}
+                  </p>
+                </LocaleLink>
+              ))}
             </div>
           </div>
         </Container>

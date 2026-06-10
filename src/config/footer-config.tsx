@@ -57,6 +57,11 @@ export function useFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
+          title: t('guides.items.itchIo'),
+          href: Routes.ItchIo,
+          external: false,
+        },
+        {
           title: t('guides.items.contentWarnings'),
           href: Routes.ContentWarnings,
           external: false,

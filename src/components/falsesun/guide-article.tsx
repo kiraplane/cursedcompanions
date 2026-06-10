@@ -26,10 +26,18 @@ const relatedRouteLabels: Record<string, string> = {
   '/kyle-route': 'Kyle Route',
   '/mini-games': 'Mini-Games',
   '/download': 'Download',
+  '/itch-io': 'itch.io Page',
   '/content-warnings': 'Content Warnings',
   '/guides': 'All Guides',
   '/disclaimer': 'Disclaimer',
 };
+
+function toSectionId(heading: string) {
+  return heading
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
 
 function getRelatedRouteLabel(route: string) {
   return (
@@ -134,6 +142,49 @@ export function GuideArticle({
               </div>
             </section>
 
+            <section className="mb-8 grid gap-4 rounded-lg border border-[#493A34] bg-[#0D1310] p-4 md:grid-cols-[1fr_1fr]">
+              <div>
+                <h2 className="font-display text-xl font-bold">
+                  Where to start on this page
+                </h2>
+                <p className="mt-2 text-sm leading-7 text-[#C7BAA7]">
+                  Pick the branch or platform problem you are solving, then use
+                  the related pages instead of replaying unrelated routes.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {guide.relatedRoutes.slice(0, 4).map((route) => (
+                    <Button
+                      key={route}
+                      asChild
+                      size="sm"
+                      variant="outline"
+                      className="border-[#493A34] bg-[#111612] text-[#F7E8C9] hover:bg-[#182019]"
+                    >
+                      <LocaleLink href={route}>
+                        {getRelatedRouteLabel(route)}
+                      </LocaleLink>
+                    </Button>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h2 className="font-display text-xl font-bold">
+                  Page sections
+                </h2>
+                <div className="mt-3 grid gap-2">
+                  {guide.body.slice(0, 5).map((section) => (
+                    <a
+                      key={section.heading}
+                      href={`#${toSectionId(section.heading)}`}
+                      className="rounded-md border border-[#493A34] bg-[#111612] px-3 py-2 text-sm leading-6 text-[#D5C5AF] transition hover:border-[#D9B56A] hover:text-[#F7E8C9]"
+                    >
+                      {section.heading}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </section>
+
             {guide.video ? (
               <section className="mb-8 overflow-hidden rounded-lg border border-[#493A34] bg-black">
                 <iframe
@@ -163,7 +214,10 @@ export function GuideArticle({
               <AdsterraAdFrame slot="banner-300x250" className="mb-8" label />
 
               {guide.body.map((section) => (
-                <section key={section.heading}>
+                <section
+                  key={section.heading}
+                  id={toSectionId(section.heading)}
+                >
                   <h2 className="font-display text-2xl font-bold text-[#F7E8C9]">
                     {section.heading}
                   </h2>
@@ -193,13 +247,15 @@ export function GuideArticle({
                 <ShieldCheck className="mt-1 size-5 shrink-0 text-[#6EA69A]" />
                 <div>
                   <h2 className="font-display text-xl font-bold">
-                    Source handling
+                    Official page and safe downloads
                   </h2>
                   <p className="mt-2 text-sm leading-7 text-[#C7BAA7]">
-                    {guide.sourceNotes}
+                    Use the creator&apos;s itch.io page for game files, platform
+                    availability, and updates. This fan guide does not host game
+                    builds, modified clients, or APK mirrors.
                   </p>
                   <p className="mt-2 text-sm leading-7 text-[#C7BAA7]">
-                    Official download and creator page:{' '}
+                    Official creator page:{' '}
                     <a
                       href={siteFacts.officialItchUrl}
                       target="_blank"

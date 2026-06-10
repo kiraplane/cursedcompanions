@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-06-08';
+export const checkedAt = '2026-06-10';
 
 export const siteFacts = {
   siteName: 'The False Sun',
@@ -17,7 +17,7 @@ export const siteFacts = {
   browserGameUrl: 'https://s.thefalsesun.org/games/the-false-sun/index.html',
   genre: 'Visual novel',
   releaseSnapshot:
-    'Released visual novel on itch.io; official page showed Windows, macOS, Linux, and Android downloads when checked on 2026-06-08. The play page lets visitors start the game online before reading route spoilers.',
+    'Released visual novel on itch.io; official page showed Windows, macOS, Linux, Android, and included 1.0 files when checked on 2026-06-10. The play page lets visitors start the game online before reading route spoilers.',
   positioning:
     'A lightweight, spoiler-marked play-online, walkthrough, and all endings guide for players stuck on routes, mini-games, and Ending 20.',
 } as const;
@@ -34,7 +34,7 @@ export const gameFacts: GameFact[] = [
       'Web browser on this site, plus Windows, macOS, Linux, and Android on the official itch.io page.',
   },
   {
-    label: 'Main search demand',
+    label: 'Main guide topics',
     value:
       'All endings, Ending 20, Silas route, Kyle route, mini-games, and safe download questions.',
   },
@@ -110,6 +110,29 @@ export const keywordMatrix: KeywordMatrixItem[] = [
     evidence: 'Recent itch comments ask how to get Ending 20.',
     notes:
       'Low-chance chicken/tutorial branch; include probability caveat and retry advice.',
+  },
+  {
+    keyword: 'the false sun itch io',
+    intent:
+      'Find the official itch.io page, included files, platform status, and safe download path.',
+    route: '/itch-io',
+    priority: 'P0',
+    status: 'keep',
+    evidence:
+      'GSC 7D showed 2,126 impressions for "the false sun itch io" with low CTR; official itch page is the safest answer.',
+    notes:
+      'Use a dedicated bridge page so the homepage and download guide do not have to change title intent.',
+  },
+  {
+    keyword: 'itch io the false sun',
+    intent:
+      'Reach the creator page while avoiding unrelated search results and unsafe mirrors.',
+    route: '/itch-io',
+    priority: 'P0',
+    status: 'keep',
+    evidence: 'GSC 7D showed 302 impressions for "itch io the false sun".',
+    notes:
+      'Fold this into the same itch.io bridge page rather than creating a second near-duplicate route.',
   },
   {
     keyword: 'the false sun walkthrough',

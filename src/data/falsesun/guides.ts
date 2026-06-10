@@ -81,6 +81,19 @@ export const guides: Guide[] = [
         ),
       },
       {
+        heading: 'Choose the page by the slot you are missing',
+        paragraphs: [
+          'The fastest cleanup route is not always the all-endings page. Use this page to identify the family, then move to the specific page that matches the blocker.',
+          'If a missing slot looks like a direct Silas relationship outcome, use the Silas route. If it looks like farm injury or a promise to return, use Kyle or Ending 20. If it happens before the story gets heavy, check the farm mini-game save instead of late dialogue.',
+        ],
+        bullets: [
+          'Missing a warm or dangerous Silas branch: open the Silas route page.',
+          'Missing the rare farm accident: open Ending 20 and test the chicken loop.',
+          'Missing a calmer farm aftermath: open the Kyle route page.',
+          'Missing a platform or save problem before route cleanup: use download, play online, or mini-games first.',
+        ],
+      },
+      {
         heading: 'Best save points for fast clean-up',
         paragraphs: [
           'Keep one early save before the tutorial and first farm work. Keep one save before you decide how much Silas handles on the farm. Keep one save before refusing or accepting the pier. Keep one save before the tree answer. Keep one save before the past-partner question and another before the final dream.',
@@ -117,6 +130,11 @@ export const guides: Guide[] = [
         question: 'Are the ending names official?',
         answer:
           'No. The labels here are route notes so players can navigate the branches without waiting for a fully verified official-name list.',
+      },
+      {
+        question: 'What should I do if I am stuck around 11 of 20 endings?',
+        answer:
+          'Stop replaying the whole game. Keep one save before the farm/chicken loop, one before Silas confrontation choices, and one before late affection choices, then test one family at a time.',
       },
     ],
   },
@@ -170,6 +188,19 @@ export const guides: Guide[] = [
           'Retry the same farm section several times before changing route tone.',
           'If nothing happens, move one save earlier and include the tutorial/farm setup.',
           'Track attempts so you know whether you tested 5, 10, or 20 loops.',
+        ],
+      },
+      {
+        heading: 'Check whether your save is already locked',
+        paragraphs: [
+          'A farm accident branch can feel random even when the important state was decided earlier. If ten or more retries from the same save repeat the same result, move back one checkpoint instead of changing final-scene answers.',
+          'Good checkpoints are before the first farm task, before the chicken interaction, and before the route decides whether the protagonist can safely remain on the farm.',
+        ],
+        bullets: [
+          'Use the closest pre-farm save first.',
+          'If the branch repeats exactly, move one save earlier.',
+          'Keep Silas tone unchanged while testing the farm state.',
+          'Do not overwrite a save that already reaches a known ending.',
         ],
       },
       {
@@ -265,6 +296,19 @@ export const guides: Guide[] = [
           'This page avoids quoting the VN script directly, but the practical rule is simple: create a save before every answer that changes whether the protagonist resists, freezes, reassures, or runs.',
         ],
       },
+      {
+        heading: 'When a Silas run fails to unlock anything new',
+        paragraphs: [
+          'If a Silas test keeps returning to the same ending, compare the earliest route family first. A fear run that became affectionate in the middle is no longer a clean fear test. An affectionate run that escalated at the pier may no longer be testing the warmer chain.',
+          'Make one clean save line for each family and resist the temptation to repair the route at the final scene. Late fixes are usually less reliable than returning to the first tone-setting choice.',
+        ],
+        bullets: [
+          'Fear route: keep distance and test the darker outcomes deliberately.',
+          'Confrontation route: save before memory and weapon choices.',
+          'Escape route: save before path and river/bridge decisions.',
+          'Affection route: keep the warm chain consistent from farm work onward.',
+        ],
+      },
     ],
     faq: [
       {
@@ -336,6 +380,18 @@ export const guides: Guide[] = [
         paragraphs: [
           'Keep an early farm save, a save before animal/chicken interaction, and a save before any route that changes whether the protagonist can stay on the farm. Run these branches before rebuilding late Silas affection choices.',
           'If the gallery slot you are missing sits near the calmer aftermath endings, try Kyle and farm-state branches first.',
+        ],
+      },
+      {
+        heading: 'Do not force Kyle into every missing slot',
+        paragraphs: [
+          'Kyle is useful, but not every unresolved ending belongs to him. If the missing branch depends on fear, confrontation, or late affection, it is probably a Silas family problem. If it depends on injury, leaving the farm, or a return-next-summer note, Kyle is more likely involved.',
+          'Use Kyle as a route filter. When the story tone is calmer and farm aftermath matters, test Kyle. When the story turns toward direct threat or romance escalation, move back to Silas-specific saves.',
+        ],
+        bullets: [
+          'Kyle likely matters: hospital, farm support, return promise, aftermath.',
+          'Silas likely matters: fear, weapon, pier, tree, dream, late affection.',
+          'Mini-games likely matter: chicken, farm task timing, early state locks.',
         ],
       },
     ],
@@ -411,6 +467,19 @@ export const guides: Guide[] = [
         ],
       },
       {
+        heading: 'Farm-task save map',
+        paragraphs: [
+          'Before a mini-game starts, save in a slot that names the task. After a successful result, save in a different slot. That gives you a clean before-and-after pair instead of one overwritten file that may already be locked.',
+          'For ending cleanup, the most useful mini-game saves are before the first farm work, before animal interaction, before path movement, and before any timed or puzzle-like sequence that changes the next scene.',
+        ],
+        bullets: [
+          'Before farm task: use this to test early state.',
+          'Before chicken interaction: use this for Ending 20 attempts.',
+          'Before path movement: use this for escape or navigation branches.',
+          'After success: keep it separate so you can return without redoing the task.',
+        ],
+      },
+      {
         heading: 'QR code and curiosity interactions',
         paragraphs: [
           'Players have commented on the QR-code joke and other curiosity interactions. Treat those as flavor unless a repeatable ending link is confirmed. Do not confuse a joke interaction with a mandatory ending path without evidence.',
@@ -456,10 +525,11 @@ export const guides: Guide[] = [
       'The False Sun Mac not working',
     ],
     sourceNotes:
-      'Official-only page. The itch.io page checked on 2026-06-08 listed Android, Windows/Linux, and macOS files; no YouTube video is used for download claims.',
+      'Official-only page. The itch.io page checked on 2026-06-10 listed Android, Windows/Linux, and macOS files; no YouTube video is used for download claims.',
     tags: ['Download', 'Android', 'Mac'],
     relatedRoutes: [
       '/play-online',
+      '/itch-io',
       '/content-warnings',
       '/all-endings',
       '/mini-games',
@@ -468,8 +538,21 @@ export const guides: Guide[] = [
       {
         heading: 'Official download path',
         paragraphs: [
-          `Download The False Sun from the official itch.io page by Oniray: ${siteFacts.officialItchUrl}. The page listed Android, Windows/Linux, and macOS builds when checked on 2026-06-08.`,
+          `Download The False Sun from the official itch.io page by Oniray: ${siteFacts.officialItchUrl}. The page listed Android, Windows/Linux, and macOS builds when checked on 2026-06-10.`,
           'Use the creator page as the source of truth. A third-party mirror can be outdated, unsafe, or bundled with files that do not belong to the game.',
+        ],
+      },
+      {
+        heading: 'Which file should you choose?',
+        paragraphs: [
+          'The itch.io download flow can show multiple files. Choose Android for an Android phone or emulator, Windows/Linux for a PC build, and macOS for Mac. If the file names or sizes change, trust the official itch.io page over any guide snapshot.',
+          'If you only want to check a route quickly, the browser play page can be easier than downloading a large build. If you care about local saves or performance, the official downloadable build is usually the safer long-run option.',
+        ],
+        bullets: [
+          'Android: use the official Android file, not a mirror APK.',
+          'Windows/Linux: use the combined desktop build from itch.io.',
+          'macOS: use the Mac build and expect normal indie-app security prompts.',
+          'Browser: use play online for quick route checks before committing to a download.',
         ],
       },
       {
@@ -486,6 +569,13 @@ export const guides: Guide[] = [
           'APK mirrors are not a shortcut for a visual novel. They can break saves, include old builds, or add security risk to a game that already has an official Android file.',
         ],
       },
+      {
+        heading: 'Mac launch trouble',
+        paragraphs: [
+          'Some itch.io players report Mac launch friction, which is common for unsigned indie downloads. Start with the official file, unzip it cleanly, keep it in a normal folder such as Applications or Downloads, and check the creator comments before using terminal commands from strangers.',
+          'Avoid broad permission commands that you do not understand. If a workaround tells you to open every file permission on a folder, treat it as a last resort and prefer official creator guidance first.',
+        ],
+      },
     ],
     faq: [
       {
@@ -496,12 +586,95 @@ export const guides: Guide[] = [
       {
         question: 'Is The False Sun on Android?',
         answer:
-          'Yes, the official itch.io page listed an Android build when checked on 2026-06-08.',
+          'Yes, the official itch.io page listed an Android build when checked on 2026-06-10.',
       },
       {
         question: 'Is there an iOS version?',
         answer:
           'The official page did not list iOS at the time of this check. Avoid unofficial iOS or APK claims unless the creator confirms them.',
+      },
+    ],
+  },
+  {
+    slug: 'itch-io',
+    path: '/itch-io',
+    title: 'The False Sun itch.io Page Guide',
+    seoTitle: 'The False Sun itch.io - Official Page, Downloads and Files',
+    seoDescription:
+      'Find the official The False Sun itch.io page by Oniray, included Android, Windows/Linux and Mac files, platform notes, comments, and safe download advice.',
+    summary:
+      'Use this page when you are trying to reach the real The False Sun itch.io listing, confirm files, or avoid unsafe mirrors before opening the walkthrough.',
+    category: 'Download',
+    difficulty: 'Beginner',
+    coverImageUrl: localGuideCover('download'),
+    publishedAt: checkedAt,
+    updatedAt: checkedAt,
+    sourceStrategy: 'official',
+    videoSearchQueries: [
+      'The False Sun itch io',
+      'itch io The False Sun',
+      'Oniray The False Sun itch.io',
+    ],
+    sourceNotes:
+      'Official-only bridge page built for itch.io search intent. Claims should stay limited to the official listing and visible download flow.',
+    tags: ['itch.io', 'Official', 'Files'],
+    relatedRoutes: [
+      '/download',
+      '/play-online',
+      '/all-endings',
+      '/content-warnings',
+    ],
+    body: [
+      {
+        heading: 'Use Oniray’s official listing',
+        paragraphs: [
+          `The official listing for The False Sun is Oniray's itch.io page: ${siteFacts.officialItchUrl}. Use that page for the creator name, release status, content warnings, and downloadable files.`,
+          'This guide is only a bridge to help you recognize the correct listing and choose the next page. It does not mirror the game, host files, or replace itch.io.',
+        ],
+      },
+      {
+        heading: 'Included files on the official download flow',
+        paragraphs: [
+          'The itch.io download flow currently shows The False Sun 1.0 files for Android, Windows/Linux, and macOS. File names and sizes can change after creator updates, so confirm the live itch.io page before downloading.',
+          'If you see a page promising a modded APK, cracked build, iOS port, or faster mirror, treat it as unsafe unless Oniray links to it directly.',
+        ],
+        bullets: [
+          'The False Sun 1.0 Android was listed as a large Android file.',
+          'The False Sun 1.0 Windows/Linux was listed as the desktop PC option.',
+          'The False Sun 1.0 mac was listed as the Mac option.',
+          'The creator accepts optional support, but the game page also exposes the standard itch.io download flow.',
+        ],
+      },
+      {
+        heading: 'When to use the download guide instead',
+        paragraphs: [
+          'Use this itch.io page guide when you need the official listing. Use the download guide when you need platform help, APK warnings, browser-play alternatives, or Mac launch notes.',
+          'For route spoilers, skip both platform pages and start with all endings, Ending 20, Silas route, or Kyle route.',
+        ],
+      },
+      {
+        heading: 'Comments can help, but they are not official patch notes',
+        paragraphs: [
+          'itch.io comments are useful for seeing what other players are stuck on, including ending counts, platform questions, and Mac issues. They are not the same as an official changelog.',
+          'When comments disagree, trust the creator listing first and use walkthrough pages only for route planning.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the official The False Sun itch.io page?',
+        answer:
+          'The official page is Oniray’s listing at oniray.itch.io/the-false-sun.',
+      },
+      {
+        question: 'Is this site the official itch.io page?',
+        answer:
+          'No. This is an unofficial fan guide that links to the official creator page and helps with walkthrough decisions.',
+      },
+      {
+        question: 'Should I use a third-party The False Sun APK?',
+        answer:
+          'No. Use the official Android file on itch.io and avoid APK mirrors, mod menus, or reuploaded builds.',
       },
     ],
   },
@@ -576,7 +749,7 @@ export const guides: Guide[] = [
   },
 ];
 
-export const featuredGuides = guides.slice(0, 5);
+export const featuredGuides = guides.slice(0, 6);
 
 export function getGuide(slug: string) {
   return guides.find((guide) => guide.slug === slug);

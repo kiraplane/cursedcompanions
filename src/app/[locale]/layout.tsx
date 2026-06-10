@@ -61,6 +61,7 @@ const MARKETING_FOOTER_KEYS = [
 const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
   'all',
   'download',
+  'itchIo',
   'contentWarnings',
   'disclaimer',
 ] as const;

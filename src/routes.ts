@@ -22,6 +22,7 @@ export enum Routes {
   ContentWarnings = '/content-warnings',
   Guides = '/guides',
   Download = '/download',
+  ItchIo = '/itch-io',
 
   // auth routes
   Login = '/auth/login',
