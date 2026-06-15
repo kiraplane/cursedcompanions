@@ -29,8 +29,14 @@ const guideLinks = [
   {
     title: 'Ending 20',
     href: '/ending-20',
-    body: 'Retry the rare farm/chicken branch without rebuilding the whole route.',
+    body: 'Test the opening farm tutorial fail route without rebuilding late choices.',
     icon: Gamepad2,
+  },
+  {
+    title: 'Save Points',
+    href: '/save-points',
+    body: 'Make clean saves before tutorial, animal tasks, and route forks.',
+    icon: BookOpen,
   },
   {
     title: 'Route Guides',
@@ -154,11 +160,18 @@ export function FalseSunPlayOnlinePage() {
               Use the creator page for Windows, macOS, Linux, and Android
               downloadable builds.
             </p>
+            <LocaleLink
+              href="/download"
+              className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#E7C77C] underline underline-offset-4"
+            >
+              Download guide
+              <ArrowRight className="size-3" />
+            </LocaleLink>
             <a
               href={siteFacts.officialItchUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#E7C77C] underline underline-offset-4"
+              className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-[#E7C77C] underline underline-offset-4"
             >
               Oniray on itch.io
               <ExternalLink className="size-3" />
@@ -201,6 +214,10 @@ export function FalseSunPlayOnlinePage() {
                 label: 'Saves',
                 body: 'Save before major choices, mini-games, and route turns. Browser saves depend on your device and can disappear if site data is cleared.',
               },
+              {
+                label: 'Language',
+                body: 'If the game opens in Russian first, check the settings menu and look for the English language option before downloading another copy.',
+              },
             ].map((item) => (
               <div
                 key={item.label}
@@ -227,7 +244,7 @@ export function FalseSunPlayOnlinePage() {
             </h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {guideLinks.map((item) => (
               <LocaleLink
                 key={item.href}
@@ -291,6 +308,17 @@ export function FalseSunPlayOnlinePage() {
                 question: 'What should I do if saves disappear?',
                 answer:
                   'Check whether you used private browsing, cleared site data, changed browsers, or switched devices. For important route progress, keep manual save points and avoid clearing browser storage mid-run.',
+              },
+              {
+                question: 'What if The False Sun opens in Russian?',
+                answer:
+                  'Open the in-game settings menu and look for the English language option. If you are still stuck, check the official itch.io comments for current player troubleshooting.',
+              },
+              {
+                question:
+                  'Should I play online or download the official build?',
+                answer:
+                  'Use play online for a quick first run. Use the official itch.io build if you are doing all-endings cleanup and need more reliable local saves.',
               },
             ]}
           />

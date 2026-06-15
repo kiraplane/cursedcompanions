@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-06-10';
+export const checkedAt = '2026-06-15';
 
 export const siteFacts = {
   siteName: 'The False Sun',
@@ -17,7 +17,7 @@ export const siteFacts = {
   browserGameUrl: 'https://s.thefalsesun.org/games/the-false-sun/index.html',
   genre: 'Visual novel',
   releaseSnapshot:
-    'Released visual novel on itch.io; official page showed Windows, macOS, Linux, Android, and included 1.0 files when checked on 2026-06-10. The play page lets visitors start the game online before reading route spoilers.',
+    'Released visual novel on itch.io; official page showed Windows, macOS, Linux, Android, and included 1.0 files when checked on 2026-06-15. The play page lets visitors start the game online before reading route spoilers.',
   positioning:
     'A lightweight, spoiler-marked play-online, walkthrough, and all endings guide for players stuck on routes, mini-games, and Ending 20.',
 } as const;
@@ -69,7 +69,7 @@ export const sources: DataSource[] = [
     url: 'https://oniray.itch.io/the-false-sun#comments',
     checkedAt,
     confidence: 'medium',
-    note: 'Recent players asked about Ending 20, all endings, mini-game skipping, iOS support, and language availability.',
+    note: 'Recent players asked about Ending 20, all endings, mini-game failures, Mac launch friction, iOS support, and language selection.',
   },
   {
     type: 'youtube',
@@ -101,7 +101,7 @@ export const sources: DataSource[] = [
     url: 'https://sozai.app/transcript/nashe-poslednee-leto-vmeste-false-sun-walkthrough/',
     checkedAt,
     confidence: 'medium',
-    note: 'Russian YouTube transcript used to cross-check the low-chance chicken / Ending 20 clue.',
+    note: 'Russian YouTube transcript kept as older route cross-check material; current Ending 20 guidance now prioritizes live itch.io tutorial-fail reports.',
   },
 ];
 
@@ -125,7 +125,7 @@ export const keywordMatrix: KeywordMatrixItem[] = [
     status: 'keep',
     evidence: 'Recent itch comments ask how to get Ending 20.',
     notes:
-      'Low-chance chicken/tutorial branch; include probability caveat and retry advice.',
+      'Opening tutorial / farm-task fail branch; include community-verification caveat and retry advice.',
   },
   {
     keyword: 'the false sun itch io',
@@ -135,7 +135,7 @@ export const keywordMatrix: KeywordMatrixItem[] = [
     priority: 'P0',
     status: 'keep',
     evidence:
-      'GSC 7D showed 2,126 impressions for "the false sun itch io" with low CTR; official itch page is the safest answer.',
+      'GSC 7D showed 4,498 impressions for "the false sun itch io" with 1.2% CTR; official itch page is the safest answer.',
     notes:
       'Use a dedicated bridge page so the homepage and download guide do not have to change title intent.',
   },
@@ -256,6 +256,42 @@ export const keywordMatrix: KeywordMatrixItem[] = [
     evidence:
       'Official itch page lists Android/macOS/Windows/Linux; comments ask platform questions.',
     notes: 'Official itch link first; avoid APK mirrors.',
+  },
+  {
+    keyword: 'the false sun скачать',
+    intent:
+      'Download The False Sun safely from official files while avoiding APK mirrors.',
+    route: '/download',
+    priority: 'P0',
+    status: 'keep',
+    evidence:
+      'GSC 7D showed 481 impressions and 167 clicks for the Russian download query, mostly landing on /download.',
+    notes:
+      'Answer in safe download language; do not create mirror, cracked APK, or unofficial file instructions.',
+  },
+  {
+    keyword: 'the false sun apk',
+    intent:
+      'Find whether Android is supported without using unsafe third-party APK sites.',
+    route: '/download',
+    priority: 'P1',
+    status: 'keep',
+    evidence:
+      'GSC 7D showed APK demand and the official itch.io page lists an Android file.',
+    notes:
+      'Use official Android file guidance and explicitly warn away from mirrors.',
+  },
+  {
+    keyword: 'the false sun language english',
+    intent:
+      'Switch the game interface from Russian to English after launching or downloading.',
+    route: '/download',
+    priority: 'P1',
+    status: 'keep',
+    evidence:
+      'Recent itch.io comments ask why the game opens in Russian and answer that the setting can be changed to English.',
+    notes:
+      'Keep this as a FAQ/support answer rather than a separate page until GSC shows standalone language-query volume.',
   },
   {
     keyword: 'the false sun book fandom',

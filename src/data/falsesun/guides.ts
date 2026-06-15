@@ -285,7 +285,7 @@ export const guides: Guide[] = [
     seoDescription:
       'How to approach The False Sun Ending 20, the low-chance chicken accident route, with retry advice, save points, and what not to change.',
     summary:
-      'Ending 20 appears to be the rare farm/chicken accident branch. The right tactic is not a late-game route rebuild; it is a tight retry loop from the closest farm save.',
+      'Ending 20 now looks most tied to the opening farm tutorial fail state. The right tactic is not a late-game route rebuild; it is a tight retry loop from before the first animal task.',
     category: 'Endings',
     difficulty: 'Spoiler Heavy',
     coverImageUrl: videos.ritsu.thumbnailUrl,
@@ -294,13 +294,13 @@ export const guides: Guide[] = [
     sourceStrategy: 'community_crosscheck',
     videoSearchQueries: [
       'The False Sun ending 20',
-      'The False Sun chicken ending',
+      'The False Sun tutorial ending',
       'The False Sun all endings part 2',
     ],
     sourceNotes:
-      'Cross-checked from itch player questions and a walkthrough transcript that describes a low-chance chicken accident leading to a hospital/city outcome.',
+      'Cross-checked from current itch player questions. Recent comments point to failing the opening tutorial / animal placement task as the cleanest Ending 20 test.',
     video: videos.ritsu,
-    tags: ['Ending 20', 'Chicken', 'Rare Branch'],
+    tags: ['Ending 20', 'Tutorial', 'Farm Task'],
     relatedRoutes: [
       '/play-online',
       '/all-endings',
@@ -314,30 +314,30 @@ export const guides: Guide[] = [
         heading: 'Why Ending 20 feels different',
         paragraphs: [
           'Most routes in The False Sun feel like they come from relationship tone: how much the protagonist trusts Silas, whether a scene escalates, and which late memory answers you choose. Ending 20 is strange because the useful clue points back to the farm instead of the final romance chain.',
-          'Treat it as a rare chicken/farm accident branch. Make a save before the animal interaction, replay that short section, and keep Silas or Kyle choices unchanged until you know the farm state itself is not the blocker.',
+          'Treat it as an early tutorial or animal-task fail branch first. Recent player reports point to deliberately failing the beginning farm task, such as placing the wrong animal or item, before changing Silas or Kyle route choices.',
         ],
       },
       {
         heading: 'Recommended retry loop',
         paragraphs: [
-          'Start from the closest save before the chicken/farm mini-game section. Run the interaction normally, watch for the accident outcome, and return to the save if the branch does not trigger. If your save is after the animal setup, go earlier.',
+          'Start from the closest save before the first farm tutorial or animal placement section. Fail the task on purpose, watch whether the route moves toward the cast / farm-fail outcome, and return to the save if it does not trigger. If your save is after the animal setup, go earlier.',
           'Do not solve this by replaying the final dream chain over and over. The available evidence points to the farm accident itself, not a hidden dialogue answer at the end of the story.',
         ],
         bullets: [
-          'Save before the chicken interaction, not after the result.',
-          'Retry the same farm section several times before changing route tone.',
-          'If nothing happens, move one save earlier and include the tutorial/farm setup.',
-          'Track attempts so you know whether you tested 5, 10, or 20 loops.',
+          'Save before the opening farm tutorial or animal placement task.',
+          'Try a deliberate fail state before changing any late route tone.',
+          'If nothing happens, move one save earlier and include the full tutorial setup.',
+          'Track attempts so you know exactly which task and mistake you tested.',
         ],
       },
       {
         heading: 'Check whether your save is already locked',
         paragraphs: [
-          'A farm accident branch can feel random even when the important state was decided earlier. If ten or more retries from the same save repeat the same result, move back one checkpoint instead of changing final-scene answers.',
-          'Good checkpoints are before the first farm task, before the chicken interaction, and before the route decides whether the protagonist can safely remain on the farm.',
+          'A farm-fail branch can feel random when the important state was decided earlier. If several retries from the same save repeat the same result, move back one checkpoint instead of changing final-scene answers.',
+          'Good checkpoints are before the tutorial begins, before the first animal placement task, and before the route decides whether the protagonist can safely remain on the farm.',
         ],
         bullets: [
-          'Use the closest pre-farm save first.',
+          'Use the closest pre-tutorial or pre-farm save first.',
           'If the branch repeats exactly, move one save earlier.',
           'Keep Silas tone unchanged while testing the farm state.',
           'Do not overwrite a save that already reaches a known ending.',
@@ -346,15 +346,15 @@ export const guides: Guide[] = [
       {
         heading: 'What the ending seems to show',
         paragraphs: [
-          'The branch appears to lead into an injury aftermath where the protagonist cannot stay on the farm as planned. Kyle is mentioned as helping around the farm, and the route has a bittersweet return-next-summer shape rather than a direct Silas confrontation.',
-          'Because the exact English gallery label still needs replay verification, this guide names the branch by its mechanic: the chicken accident route.',
+          'The branch appears to reward the player for failing a farm task instead of perfecting the main relationship route. That is why it can be missed by players who only replay Silas choices and never test the tutorial again.',
+          'Because exact English gallery wording still needs direct replay verification, this guide names the branch by its mechanic: the farm tutorial fail route.',
         ],
       },
       {
         heading: 'Common mistakes',
         paragraphs: [
           'The most common mistake is assuming Ending 20 is a moral answer hidden in the final romance route. That sends players through long loops that never touch the rare farm trigger.',
-          'The second mistake is saving too late. If the farm state is already decided, reloading that save can repeat the same result forever.',
+          'The second mistake is saving too late. If the farm state is already decided, reloading that save can repeat the same result forever. Go back before the first animal task, fail it cleanly, then continue only far enough to see whether the ending route changes.',
         ],
       },
     ],
@@ -362,12 +362,12 @@ export const guides: Guide[] = [
       {
         question: 'Is Ending 20 random?',
         answer:
-          'Current community evidence suggests a low-chance branch, but the exact probability is not officially confirmed. Treat it as random until replay testing proves a deterministic setup.',
+          'Current community evidence points more toward an opening tutorial or animal-task fail state than pure randomness. The exact trigger is still community-verified rather than official.',
       },
       {
         question: 'Where should I save for Ending 20?',
         answer:
-          'Save before the chicken/farm interaction. If that does not work, save earlier before the tutorial or farm setup begins.',
+          'Save before the opening tutorial or first animal placement task. If that does not work, save earlier before the farm setup begins.',
       },
       {
         question: 'Is Ending 20 a Silas ending?',
@@ -717,8 +717,8 @@ export const guides: Guide[] = [
       {
         heading: 'Chicken retries for Ending 20',
         paragraphs: [
-          'If you are only missing the chicken accident branch, turn the farm section into a retry loop. Do the same interaction multiple times before moving earlier in the story. If the result never changes, your save may be too late or the route state may already be locked.',
-          'Write down attempt counts. A rare branch feels less maddening when you know you tested a real sample instead of vaguely trying "a bunch".',
+          'If you are only missing Ending 20, start by testing the opening tutorial or animal placement task instead of replaying late Silas scenes. Current player reports point toward a deliberate farm-task failure as the fastest route to check.',
+          'Write down exactly which task you failed and from which save. If the result never changes, your save may be too late or the route state may already be locked.',
         ],
       },
       {
@@ -750,7 +750,7 @@ export const guides: Guide[] = [
       {
         question: 'Do mini-games affect endings?',
         answer:
-          'At least one rare ending appears tied to a farm/chicken interaction, so mini-games should be treated as route-relevant until verified otherwise.',
+          'Yes. Ending 20 currently looks tied to an early farm tutorial or animal-task fail state, so mini-games should be treated as route-relevant.',
       },
       {
         question: 'Should I scan the QR code?',
@@ -825,6 +825,26 @@ export const guides: Guide[] = [
         ],
       },
       {
+        heading: 'If you searched скачать, APK, or Android',
+        paragraphs: [
+          'Russian download searches such as "the false sun скачать" usually mean the same safe path: use the official itch.io download flow and choose the Android file only if you are on Android. This fan guide does not host files or point to mirror APKs.',
+          'If a page promises a smaller APK, a mod menu, an unlocked gallery, or a faster Android mirror, skip it unless Oniray links to that page directly. For a route-heavy visual novel, save integrity matters more than shaving a few minutes off the download.',
+        ],
+        bullets: [
+          'Official Android file: use itch.io.',
+          'Unofficial APK mirror: avoid it.',
+          'Browser play: use it for a quick first run before downloading.',
+          'All-endings cleanup: prefer the official build if browser saves are unreliable.',
+        ],
+      },
+      {
+        heading: 'If the game opens in Russian',
+        paragraphs: [
+          'Some players report opening the game and seeing Russian first. Check the in-game settings menu and look for the English language option before reinstalling or downloading another copy.',
+          'If the interface is hard to navigate, use the official itch.io comments as a live help thread, because players are actively answering language and platform questions there.',
+        ],
+      },
+      {
         heading: 'Mac launch trouble',
         paragraphs: [
           'Some itch.io players report Mac launch friction, which is common for unsigned indie downloads. Start with the official file, unzip it cleanly, keep it in a normal folder such as Applications or Downloads, and check the creator comments before using terminal commands from strangers.',
@@ -847,6 +867,16 @@ export const guides: Guide[] = [
         question: 'Is there an iOS version?',
         answer:
           'The official page did not list iOS at the time of this check. Avoid unofficial iOS or APK claims unless the creator confirms them.',
+      },
+      {
+        question: 'What does скачать mean for The False Sun downloads?',
+        answer:
+          'It means download. Use the official itch.io page for The False Sun instead of third-party APK or mirror pages.',
+      },
+      {
+        question: 'How do I switch The False Sun from Russian to English?',
+        answer:
+          'Open the game settings and look for the English language option. Recent itch.io comments are also useful because players are actively sharing language-menu help.',
       },
     ],
   },
@@ -914,6 +944,19 @@ export const guides: Guide[] = [
           'When comments disagree, trust the creator listing first and use walkthrough pages only for route planning.',
         ],
       },
+      {
+        heading: 'Current comment checks worth making',
+        paragraphs: [
+          'Before downloading, skim the newest comments for three practical issues: Mac launch friction, language selection, and Ending 20 / farm tutorial clues. These are fast-moving player-help topics, so the live itch.io page can be fresher than a static guide snapshot.',
+          'For anything involving files, still treat the official listing as the only safe download source. Comments can explain symptoms, but they should not send you to reuploaded builds, patched APKs, or creator impersonation pages.',
+        ],
+        bullets: [
+          'Language help: look for the English option in the settings menu.',
+          'Ending 20 help: check whether players mention failing the opening farm tutorial.',
+          'Mac help: prefer creator or itch app guidance before terminal commands.',
+          'Download help: use the official files listed on the itch.io page.',
+        ],
+      },
     ],
     faq: [
       {
@@ -930,6 +973,11 @@ export const guides: Guide[] = [
         question: 'Should I use a third-party The False Sun APK?',
         answer:
           'No. Use the official Android file on itch.io and avoid APK mirrors, mod menus, or reuploaded builds.',
+      },
+      {
+        question: 'Can itch.io comments help with language or Mac issues?',
+        answer:
+          'Yes, but treat them as player troubleshooting, not official patch notes. Use comments for clues and the official listing for files.',
       },
     ],
   },

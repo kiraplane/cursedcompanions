@@ -47,6 +47,20 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/campaigns(?:\/.*)?$/, target: '/all-endings' },
   { pattern: /^\/alliances(?:\/.*)?$/, target: '/' },
   { pattern: /^\/updates(?:\/.*)?$/, target: '/guides' },
+  { pattern: /^\/itchio\/?$/, target: '/itch-io' },
+  { pattern: /^\/itch-io-the-false-sun\/?$/, target: '/itch-io' },
+  { pattern: /^\/the-false-sun-itch-io\/?$/, target: '/itch-io' },
+  { pattern: /^\/oniray-itch-io\/?$/, target: '/itch-io' },
+  { pattern: /^\/download-the-false-sun\/?$/, target: '/download' },
+  { pattern: /^\/the-false-sun-download\/?$/, target: '/download' },
+  { pattern: /^\/the-false-sun-apk\/?$/, target: '/download' },
+  { pattern: /^\/android-download\/?$/, target: '/download' },
+  { pattern: /^\/ending20\/?$/, target: '/ending-20' },
+  { pattern: /^\/ending-20-guide\/?$/, target: '/ending-20' },
+  { pattern: /^\/the-false-sun-ending-20\/?$/, target: '/ending-20' },
+  { pattern: /^\/silas\/?$/, target: '/silas-route' },
+  { pattern: /^\/silas-the-false-sun\/?$/, target: '/silas-route' },
+  { pattern: /^\/the-false-sun-silas\/?$/, target: '/silas-route' },
 ];
 
 export default async function middleware(req: NextRequest) {
