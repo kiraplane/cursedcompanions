@@ -79,6 +79,12 @@ export const websiteConfig: WebsiteConfig = {
         name: 'Español',
         hreflang: 'es',
       },
+
+      id: {
+        flag: '🇮🇩',
+        name: 'Bahasa Indonesia',
+        hreflang: 'id-ID',
+      },
     },
   },
   blog: {
