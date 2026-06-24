@@ -2,9 +2,23 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
   "name": "orbofcreation",
+  "workers_dev": true,
+  "preview_urls": true,
   "keep_vars": true,
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "routes": [
+    {
+      "pattern": "orbofcreation.wiki",
+      "custom_domain": true,
+      "zone_name": "orbofcreation.wiki"
+    },
+    {
+      "pattern": "www.orbofcreation.wiki",
+      "custom_domain": true,
+      "zone_name": "orbofcreation.wiki"
+    }
+  ],
   "build": {
     "command": "pnpm run cf:build"
   },
