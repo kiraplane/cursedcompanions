@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-06-24';
+export const checkedAt = '2026-06-26';
 
 export const siteFacts = {
   siteName: 'Orb of Creation',
@@ -59,7 +59,7 @@ export const sourceList: DataSource[] = [
     url: siteFacts.officialSteamUrl,
     checkedAt,
     confidence: 'high',
-    note: 'Used for official title, developer, publisher, release date, platform support, review snapshot, and feature wording.',
+    note: 'Rechecked June 26, 2026. Used for official title, developer, publisher, release date, platform support, review snapshot, major 1.0 update wording, and feature wording.',
   },
   {
     type: 'official',
@@ -67,7 +67,7 @@ export const sourceList: DataSource[] = [
     url: 'https://steamcommunity.com/games/1910680/announcements/detail/688634814372254859',
     checkedAt,
     confidence: 'high',
-    note: 'Confirms 1.0 release and official trailer signal.',
+    note: 'Rechecked June 26, 2026. Confirms 1.0 release and official trailer signal.',
   },
   {
     type: 'official',
