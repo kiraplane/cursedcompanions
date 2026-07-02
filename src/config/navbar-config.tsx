@@ -4,12 +4,12 @@ import { Routes } from '@/routes';
 import type { NestedMenuItem } from '@/types';
 import {
   BookOpen,
-  Compass,
+  Boxes,
   Download,
   Gamepad2,
   MessageCircle,
+  Skull,
   Sparkles,
-  Wand2,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -30,16 +30,16 @@ export function useNavbarLinks(): NestedMenuItem[] {
       icon: <BookOpen className="size-4" />,
     },
     {
-      title: t('spells.title'),
-      href: Routes.Spells,
+      title: t('cards.title'),
+      href: Routes.Cards,
       external: false,
-      icon: <Wand2 className="size-4" />,
+      icon: <Boxes className="size-4" />,
     },
     {
-      title: t('research.title'),
-      href: Routes.Research,
+      title: t('monsters.title'),
+      href: Routes.Monsters,
       external: false,
-      icon: <Compass className="size-4" />,
+      icon: <Skull className="size-4" />,
     },
     {
       title: t('steam.title'),

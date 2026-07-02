@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Orb of Creation - arcane incremental guide theme */
+/* Feed The Pit - investigative horror guide theme */
 
 :root {
   --font-noto-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -389,11 +389,11 @@ body {
 }
 
 /*
- * Orb of Creation theme colors
+ * Feed The Pit theme colors
  */
 .theme-default {
-  --primary: #ffb68a;
-  --primary-foreground: #2a1720;
+  --primary: #e3483b;
+  --primary-foreground: #170b0a;
 }
 
 .theme-blue {

@@ -1,15 +1,13 @@
-# Orb of Creation Wiki
+# Feed The Pit Wiki
 
-Unofficial fan-made wiki, guide, and browser play site for MarpleGames'
-incremental puzzle game Orb of Creation.
+Independent guide and browser-play site for Feed The Pit.
 
-The site is built on the existing Next.js / MkSaaS stack and focuses on:
+## Scope
 
-- Browser play page at `/play-online`
-- Beginner guide and systems pages for spells, research, rituals, alchemy, and Druidry
-- Steam 1.0 release and official download guidance
-- itch.io, Discord, and mobile/APK safety pages
-- English SEO pages for long-tail Orb of Creation search demand
+- Steam Act 1 guide hub for the Curious Fox Sox investigative horror game.
+- Core pages for cards, monsters, walkthrough, endings, achievements, Steam, downloads, Discord, rendering fixes, and mobile/APK safety.
+- `/play-online` self-hosts the authorized mooncrustgames HTML5 browser build from itch.io and explains how it differs from the Steam release.
+- No codes page, tier list, APK mirror, cracked client, save editor, or fake future-act claims.
 
 ## Development
 
@@ -17,19 +15,19 @@ The site is built on the existing Next.js / MkSaaS stack and focuses on:
 pnpm install
 pnpm dev
 pnpm lint
+pnpm exec tsc --noEmit
 pnpm build
 ```
 
-The production domain is:
+Canonical domain:
 
 ```txt
-https://www.orbofcreation.wiki
+https://www.feedthepit.wiki
 ```
 
-## Content Rules
+## Source Rules
 
-- Keep the site clearly labeled as an unofficial fan-made wiki.
-- Prefer official Steam, itch.io, Discord, and MarpleGames information.
-- Do not recommend unsafe APKs, modified clients, save editors, cheats, or copied paid Steam files.
-- Use guide videos only as supporting references; write original, decision-first guide copy.
-- Treat mechanics as version-sensitive and update pages when Orb of Creation changes.
+- Prefer official Steam, Steam Community, Curious Fox Sox, YouTube, and itch.io sources.
+- Treat Acts 2 and 3 as pending until official updates confirm playable content.
+- Keep the Steam horror game separate from the mooncrustgames browser incremental.
+- Avoid unsafe downloads, APK mirrors, cheats, scripts, modified clients, and fake code generators.

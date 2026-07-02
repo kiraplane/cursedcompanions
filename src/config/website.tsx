@@ -20,18 +20,18 @@ export const websiteConfig: WebsiteConfig = {
   },
   metadata: {
     images: {
-      ogImage: '/orbofcreation/orb-of-creation-og.png',
-      logoLight: '/logo.png',
-      logoDark: '/logo.png',
+      ogImage: '/feedthepit/feed-the-pit-header.jpg',
+      logoLight: '/feedthepit/feed-the-pit-header.jpg',
+      logoDark: '/feedthepit/feed-the-pit-header.jpg',
     },
     social: {
       github: '',
       twitter: '',
       blueSky: '',
-      discord: '',
+      discord: 'https://discord.gg/WMdgNGB9Zc',
       mastodon: '',
       linkedin: '',
-      youtube: '',
+      youtube: 'https://www.youtube.com/@CuriousFoxSox',
     },
   },
   features: {
@@ -75,8 +75,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'Orb of Creation <hello@orbofcreation.wiki>',
-    supportEmail: 'hello@orbofcreation.wiki',
+    fromEmail: 'Feed The Pit <hello@feedthepit.wiki>',
+    supportEmail: 'hello@feedthepit.wiki',
   },
   newsletter: {
     enable: false,

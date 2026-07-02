@@ -19,6 +19,7 @@
       ".conductor/**",
       ".vscode/**",
       ".source/**",
+      "public/games/**",
       "node_modules/**",
       "dist/**",
       "build/**",

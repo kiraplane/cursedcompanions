@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Terms of Service | Orb of Creation Wiki',
+    title: 'Terms of Service | Feed The Pit Wiki',
     description:
-      'Terms for using Orb of Creation Wiki, an unofficial Orb of Creation guide site.',
+      'Terms for using Feed The Pit Wiki, an independent Feed The Pit guide site.',
     locale,
     pathname: '/terms',
   });
@@ -24,15 +24,15 @@ export default function TermsOfServicePage() {
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Terms of Service</h1>
         <p className="leading-8 text-[#CDEAE7]">
-          This site provides unofficial Orb of Creation guides, browser play
+          This site provides independent Feed The Pit guides, browser play
           access, source notes, and official-link guidance. It is not affiliated
-          with, endorsed by, sponsored by, or operated by MarpleGames, Valve,
-          Steam, or itch.io.
+          with, endorsed by, sponsored by, or operated by Curious Fox Sox,
+          mooncrustgames, Valve, Steam, or itch.io.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
-          Mechanics, spell names, and progression details can change after game
-          updates. Treat guide pages as community-oriented guidance and verify
-          important details in your current game version.
+          Mechanics, mission details, achievements, and platform requirements
+          can change after game updates. Treat guide pages as community-oriented
+          guidance and verify important details in your current game version.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
           Do not use this site to distribute unauthorized game files, unsafe
@@ -40,7 +40,7 @@ export default function TermsOfServicePage() {
           automation scripts.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
-          Questions about these terms can be sent to hello@orbofcreation.wiki.
+          Questions about these terms can be sent to hello@feedthepit.wiki.
         </p>
       </Container>
     </div>

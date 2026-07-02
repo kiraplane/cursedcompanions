@@ -1,11 +1,11 @@
 {
-  "name": "Orb of Creation Wiki",
-  "short_name": "Orb Wiki",
-  "description": "Orb of Creation wiki for play online, beginner guides, spells, research, rituals, Steam 1.0, itch.io, Discord, and safe downloads.",
+  "name": "Feed The Pit Wiki",
+  "short_name": "Pit Wiki",
+  "description": "Feed The Pit wiki for Act 1 guides, cards, monsters, walkthroughs, achievements, play online, Steam, and safe downloads.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#111915",
-  "theme_color": "#FFB68A",
+  "background_color": "#0B0708",
+  "theme_color": "#E3483B",
   "icons": [
     {
       "src": "/favicon-32x32.png",

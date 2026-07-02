@@ -47,18 +47,23 @@ export function useFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
-          title: t('guides.items.spells'),
-          href: Routes.Spells,
+          title: t('guides.items.cards'),
+          href: Routes.Cards,
           external: false,
         },
         {
-          title: t('guides.items.research'),
-          href: Routes.Research,
+          title: t('guides.items.monsters'),
+          href: Routes.Monsters,
           external: false,
         },
         {
-          title: t('guides.items.rituals'),
-          href: Routes.Rituals,
+          title: t('guides.items.walkthrough'),
+          href: Routes.Walkthrough,
+          external: false,
+        },
+        {
+          title: t('guides.items.achievements'),
+          href: Routes.Achievements,
           external: false,
         },
       ],
@@ -74,6 +79,11 @@ export function useFooterLinks(): NestedMenuItem[] {
         {
           title: t('official.items.mobile'),
           href: Routes.Mobile,
+          external: false,
+        },
+        {
+          title: t('official.items.fixes'),
+          href: Routes.RenderingFixes,
           external: false,
         },
         {

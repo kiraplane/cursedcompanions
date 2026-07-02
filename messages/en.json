@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "Orb of Creation",
-    "title": "Orb of Creation Wiki - Guides, Play Online and Steam 1.0",
-    "description": "Orb of Creation wiki with play online, beginner guide, spells, research, rituals, alchemy, New Game+, Steam, itch.io, Discord, and safe download help."
+    "name": "Feed The Pit",
+    "title": "Feed The Pit Wiki - Act 1 Guides and Play Online",
+    "description": "Feed The Pit wiki with Act 1 guide, cards, monsters, walkthrough, endings, achievements, Steam, download help, and play online."
   },
   "Common": {
     "premium": "Premium",
@@ -54,7 +54,7 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping Orb of Creation Wiki maintained",
+    "description": "Optional supporter plans for keeping Feed The Pit Wiki maintained",
     "subtitle": "Simple support options for readers who want to help maintain current guides and hosting",
     "monthly": "Monthly",
     "yearly": "Yearly",
@@ -80,11 +80,11 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse Orb of Creation Wiki with no payment required",
+      "description": "Browse Feed The Pit Wiki with no payment required",
       "features": {
         "feature-1": "Play-online page and official-link guidance",
-        "feature-2": "Beginner, spells, research, and ritual guides",
-        "feature-3": "Steam, itch.io, Discord, and mobile safety pages",
+        "feature-2": "Beginner, cards, monsters, Act 1, and walkthrough guides",
+        "feature-3": "Steam, itch.io, achievements, fixes, Discord, and mobile safety pages",
         "feature-4": "Guide pages updated as sources change"
       },
       "limits": {
@@ -96,7 +96,7 @@
     },
     "pro": {
       "name": "Supporter",
-      "description": "For readers who want to support ongoing walkthrough updates",
+      "description": "For readers who want to support ongoing guide updates",
       "features": {
         "feature-1": "Support site maintenance",
         "feature-2": "Help fund future source checks",
@@ -113,7 +113,7 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of Orb of Creation Wiki maintenance",
+      "description": "For heavier support of Feed The Pit Wiki maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
@@ -296,14 +296,14 @@
       "guides": {
         "title": "Guides"
       },
-      "spells": {
-        "title": "Spells"
+      "cards": {
+        "title": "Cards"
       },
-      "research": {
-        "title": "Research"
+      "monsters": {
+        "title": "Monsters"
       },
       "steam": {
-        "title": "Steam 1.0"
+        "title": "Steam Act 1"
       },
       "download": {
         "title": "Download"
@@ -313,12 +313,12 @@
       }
     },
     "footer": {
-      "tagline": "Unofficial Orb of Creation wiki for play online, Steam 1.0, spells, research, rituals, alchemy, New Game+, and safe platform links.",
+      "tagline": "Independent Feed The Pit wiki for Act 1, cards, monsters, walkthrough, endings, achievements, play online, and safe platform links.",
       "play": {
         "title": "Play",
         "items": {
           "online": "Play Online",
-          "steam": "Steam 1.0",
+          "steam": "Steam Act 1",
           "itchIo": "itch.io",
           "download": "Download"
         }
@@ -328,9 +328,10 @@
         "items": {
           "all": "All Guides",
           "beginner": "Beginner Guide",
-          "spells": "Spells",
-          "research": "Research",
-          "rituals": "Rituals"
+          "cards": "Cards",
+          "monsters": "Monsters",
+          "walkthrough": "Walkthrough",
+          "achievements": "Achievements"
         }
       },
       "official": {
@@ -338,7 +339,8 @@
         "items": {
           "discord": "Discord",
           "mobile": "Mobile Safety",
-          "disclaimer": "Disclaimer"
+          "disclaimer": "Disclaimer",
+          "fixes": "Rendering Fixes"
         }
       },
       "legal": {

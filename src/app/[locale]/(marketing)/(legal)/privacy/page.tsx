@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Privacy Policy | Orb of Creation Wiki',
+    title: 'Privacy Policy | Feed The Pit Wiki',
     description:
-      'Privacy policy for Orb of Creation Wiki, an unofficial guide and play-online site.',
+      'Privacy policy for Feed The Pit Wiki, an unofficial guide and play-online site.',
     locale,
     pathname: '/privacy',
   });
@@ -24,8 +24,8 @@ export default function PrivacyPolicyPage() {
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Privacy Policy</h1>
         <p className="leading-8 text-[#CDEAE7]">
-          Orb of Creation Wiki is an unofficial fan guide and browser play site.
-          We do not require accounts for browsing the wiki, system guides,
+          Feed The Pit Wiki is an unofficial fan guide and browser play site. We
+          do not require accounts for browsing the wiki, system guides,
           official-link pages, or the play-online page.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
           embeds official artwork, store links, or guide videos.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
-          Privacy questions can be sent to hello@orbofcreation.wiki.
+          Privacy questions can be sent to hello@feedthepit.wiki.
         </p>
       </Container>
     </div>

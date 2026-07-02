@@ -1,4 +1,4 @@
-import { guides } from '@/data/orbofcreation/guides';
+import { guides } from '@/data/feedthepit/guides';
 import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import { routing } from '../i18n/routing';
@@ -8,9 +8,9 @@ const coreRoutes = [
   Routes.Root,
   Routes.Play,
   Routes.Guides,
-  Routes.Spells,
-  Routes.Research,
-  Routes.Rituals,
+  Routes.Cards,
+  Routes.Monsters,
+  Routes.Walkthrough,
   Routes.Steam,
   Routes.Download,
   Routes.ItchIo,
@@ -26,7 +26,7 @@ const guideRoutes = guides
   .map((guide) => guide.path)
   .filter((path) => !coreRoutes.includes(path as Routes));
 
-const stableLastModified = new Date('2026-06-24T00:00:00.000Z');
+const stableLastModified = new Date('2026-07-02T00:00:00.000Z');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapList: MetadataRoute.Sitemap = [];
@@ -55,9 +55,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               ? 0.95
               : route === Routes.Guides ||
                   route === Routes.Steam ||
-                  route === Routes.Spells ||
-                  route === Routes.Research ||
-                  route === Routes.Rituals ||
+                  route === Routes.Cards ||
+                  route === Routes.Monsters ||
+                  route === Routes.Walkthrough ||
                   route === Routes.Download
                 ? 0.9
                 : 0.8,

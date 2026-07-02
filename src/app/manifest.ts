@@ -23,12 +23,12 @@ import type { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: defaultMessages.Metadata.name,
-    short_name: 'Orb Wiki',
+    short_name: 'Pit Wiki',
     description: defaultMessages.Metadata.description,
     start_url: '/',
     display: 'standalone',
-    background_color: '#111915',
-    theme_color: '#FFB68A',
+    background_color: '#0B0708',
+    theme_color: '#E3483B',
     icons: [
       {
         src: '/favicon-32x32.png',

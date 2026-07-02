@@ -12,15 +12,17 @@ export enum Routes {
   TermsOfService = '/terms',
   Disclaimer = '/disclaimer',
 
-  // Orb of Creation wiki routes
+  // Feed The Pit wiki routes
   Play = '/play-online',
   Guides = '/guides',
   BeginnerGuide = '/guides/beginner-guide',
-  Spells = '/spells',
-  Research = '/research',
-  Rituals = '/rituals',
-  AlchemyDruidry = '/guides/alchemy-druidry',
-  NewGamePlus = '/guides/new-game-plus',
+  Cards = '/cards',
+  Monsters = '/monsters',
+  Walkthrough = '/walkthrough',
+  ActOneWalkthrough = '/guides/act-1-walkthrough',
+  EndingGuide = '/guides/ending-guide',
+  Achievements = '/guides/achievements',
+  RenderingFixes = '/guides/rendering-fixes',
   Steam = '/steam',
   Download = '/download',
   ItchIo = '/itch-io',

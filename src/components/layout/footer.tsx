@@ -131,8 +131,8 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
           </span>
 
           <span className="text-muted-foreground text-sm">
-            Unofficial Orb of Creation wiki. Not affiliated with MarpleGames,
-            Steam, or itch.io.
+            Independent Feed The Pit guide site. Not affiliated with Curious Fox
+            Sox, mooncrustgames, Steam, or itch.io.
           </span>
         </Container>
       </div>

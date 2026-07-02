@@ -45,18 +45,26 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/save-editor(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/updates(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/itchio\/?$/, target: '/itch-io' },
-  { pattern: /^\/itch-io-orb-of-creation\/?$/, target: '/itch-io' },
-  { pattern: /^\/orb-of-creation-itch-io\/?$/, target: '/itch-io' },
-  { pattern: /^\/download-orb-of-creation\/?$/, target: '/download' },
-  { pattern: /^\/orb-of-creation-download\/?$/, target: '/download' },
-  { pattern: /^\/orb-of-creation-apk\/?$/, target: '/mobile' },
+  { pattern: /^\/itch-io-feed-the-pit\/?$/, target: '/itch-io' },
+  { pattern: /^\/feed-the-pit-itch-io\/?$/, target: '/itch-io' },
+  { pattern: /^\/download-feed-the-pit\/?$/, target: '/download' },
+  { pattern: /^\/feed-the-pit-download\/?$/, target: '/download' },
+  { pattern: /^\/feed-the-pit-apk\/?$/, target: '/mobile' },
   { pattern: /^\/android-download\/?$/, target: '/mobile' },
-  { pattern: /^\/orb-of-creation-mobile\/?$/, target: '/mobile' },
-  { pattern: /^\/orb-of-creation-discord\/?$/, target: '/discord' },
-  { pattern: /^\/orb-of-creation-steam\/?$/, target: '/steam' },
-  { pattern: /^\/orb-of-creation-research\/?$/, target: '/research' },
-  { pattern: /^\/orb-of-creation-spells\/?$/, target: '/spells' },
-  { pattern: /^\/orb-of-creation-rituals\/?$/, target: '/rituals' },
+  { pattern: /^\/feed-the-pit-mobile\/?$/, target: '/mobile' },
+  { pattern: /^\/feed-the-pit-discord\/?$/, target: '/discord' },
+  { pattern: /^\/feed-the-pit-steam\/?$/, target: '/steam' },
+  { pattern: /^\/feed-the-pit-monsters\/?$/, target: '/monsters' },
+  { pattern: /^\/feed-the-pit-cards\/?$/, target: '/cards' },
+  { pattern: /^\/feed-the-pit-walkthrough\/?$/, target: '/walkthrough' },
+  {
+    pattern: /^\/feed-the-pit-act-1(?:\/.*)?$/,
+    target: '/guides/act-1-walkthrough',
+  },
+  {
+    pattern: /^\/feed-the-pit-ending(?:\/.*)?$/,
+    target: '/guides/ending-guide',
+  },
 ];
 
 export default async function middleware(req: NextRequest) {
@@ -64,11 +72,8 @@ export default async function middleware(req: NextRequest) {
   const hostHeader = req.headers.get('host');
   const hostname = hostHeader?.split(':')[0].toLowerCase();
   const forwardedProto = req.headers.get('x-forwarded-proto');
-  const productionHosts = new Set([
-    'orbofcreation.wiki',
-    'www.orbofcreation.wiki',
-  ]);
-  const canonicalHost = 'www.orbofcreation.wiki';
+  const productionHosts = new Set(['feedthepit.wiki', 'www.feedthepit.wiki']);
+  const canonicalHost = 'www.feedthepit.wiki';
 
   if (
     hostname &&
