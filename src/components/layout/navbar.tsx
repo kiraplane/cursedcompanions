@@ -67,7 +67,7 @@ export function Navbar({ scroll }: NavBarProps) {
           <div className="flex items-center">
             <LocaleLink href="/" className="flex items-center space-x-2">
               <Logo />
-              <span className="font-display text-lg font-bold tracking-wide">
+              <span className="hidden whitespace-nowrap font-display text-lg font-bold tracking-wide xl:inline">
                 {t('Metadata.name')}
               </span>
             </LocaleLink>

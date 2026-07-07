@@ -127,7 +127,7 @@ export function getHomeContent(_locale?: Locale | string): HomeContent {
     coreGuidesEyebrow: 'Core guides',
     coreGuidesTitle: 'Choose the page by the decision in front of you',
     allGuidesButton: 'All guides',
-    currentFactsTitle: 'Current official snapshot',
+    currentFactsTitle: 'Current game snapshot',
     findPageTitle: 'Keyword and page map',
     primaryLinks: {
       beginner: {

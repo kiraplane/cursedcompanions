@@ -17,37 +17,113 @@ import { siteFacts } from '@/data/moonlightpeaks/sources';
 import { LocaleLink } from '@/i18n/navigation';
 import {
   ArrowRight,
+  BookOpen,
+  Boxes,
+  Calculator,
   CalendarClock,
-  ExternalLink,
+  Database,
   Gamepad2,
   Gift,
   Heart,
+  ListChecks,
   Moon,
   ShieldAlert,
+  UsersRound,
+  Wrench,
 } from 'lucide-react';
 import type { Locale } from 'next-intl';
 import Image from 'next/image';
 
-const keywordLinks = [
-  ['Moonlight Peaks', '/'],
-  ['Moonlight Peaks wiki', '/'],
-  ['Moonlight Peaks guides', '/guides'],
-  ['Moonlight Peaks release date', '/release-date'],
-  ['Moonlight Peaks demo', '/demo'],
-  ['Moonlight Peaks platforms', '/platforms'],
-  ['Moonlight Peaks database', '/database'],
-  ['Moonlight Peaks tools', '/tools'],
-  ['Moonlight Peaks item tracker', '/tools/item-tracker'],
-  ['Moonlight Peaks Switch', '/switch'],
-  ['Moonlight Peaks Steam Deck', '/steam-deck'],
-  ['Moonlight Peaks romance options', '/romance'],
-  ['Moonlight Peaks characters', '/characters'],
-  ['Moonlight Peaks gift guide', '/gifts'],
-  ['Moonlight Peaks farming', '/farming'],
-  ['Moonlight Peaks magic', '/magic'],
-  ['Moonlight Peaks Nokturna', '/nokturna'],
-  ['Moonlight Peaks cheats', '/cheats'],
-  ['Moonlight Peaks Discord', '/discord'],
+const coreDataTools = [
+  {
+    title: 'Database hub',
+    href: '/database',
+    icon: Database,
+    meta: 'Characters, families, locations, items',
+    body: 'Start from the structured Moonlight Peaks database before opening a narrow page.',
+  },
+  {
+    title: 'Character database',
+    href: '/database/characters',
+    icon: UsersRound,
+    meta: 'Residents and romance context',
+    body: 'Browse resident rows with portraits, species, families, birthdays, and roles.',
+  },
+  {
+    title: 'Item database',
+    href: '/database/items',
+    icon: Boxes,
+    meta: 'Crops, tools, animals, resources',
+    body: 'Use item rows for checklist planning and early collection routing.',
+  },
+  {
+    title: 'Tools hub',
+    href: '/tools',
+    icon: Wrench,
+    meta: 'Local trackers and planners',
+    body: 'Open the full tool set for platform choice, romance notes, item tracking, and crop math.',
+  },
+  {
+    title: 'Item tracker',
+    href: '/tools/item-tracker',
+    icon: ListChecks,
+    meta: 'Browser-local checklist',
+    body: 'Mark crops, resources, recipes, tools, and animals without sending data anywhere.',
+  },
+  {
+    title: 'Farming calculator',
+    href: '/tools/farming-profit-calculator',
+    icon: Calculator,
+    meta: 'Manual crop math',
+    body: 'Compare seed cost, sell value, days, harvests, and extra cost from your own save.',
+  },
+] as const;
+
+const quickRouteGroups = [
+  {
+    title: 'Start',
+    icon: BookOpen,
+    body: 'Launch, demo, and first-save routing.',
+    links: [
+      ['Beginner', '/guides/beginner-guide'],
+      ['Guides', '/guides'],
+      ['Release', '/release-date'],
+      ['Demo', '/demo'],
+    ],
+  },
+  {
+    title: 'Platforms',
+    icon: Gamepad2,
+    body: 'Pick where to play before buying.',
+    links: [
+      ['Platform hub', '/platforms'],
+      ['Switch', '/switch'],
+      ['Steam Deck', '/steam-deck'],
+      ['Download', '/download'],
+    ],
+  },
+  {
+    title: 'Relationships',
+    icon: Heart,
+    body: 'Plan residents, romance, and gifts.',
+    links: [
+      ['Romance', '/romance'],
+      ['Characters', '/characters'],
+      ['Character DB', '/database/characters'],
+      ['Gifts', '/gifts'],
+    ],
+  },
+  {
+    title: 'Farm systems',
+    icon: Moon,
+    body: 'Use data and tools for routines.',
+    links: [
+      ['Farming', '/farming'],
+      ['Magic', '/magic'],
+      ['Nokturna', '/nokturna'],
+      ['Cheats safety', '/cheats'],
+    ],
+  },
 ] as const;
 
 const beginnerJourney = [
@@ -114,16 +190,14 @@ const coreModules = [
     ],
   },
   {
-    title: 'Database, Tools, and Safety',
+    title: 'Safety and Community',
     icon: ShieldAlert,
-    body: 'Check structured rows, local trackers, Nokturna, safe downloads, Discord, and cheat-search risks.',
+    body: 'Use safe download paths, community notes, and cheat-risk pages before trusting launch-week links.',
     links: [
-      ['Database', '/database'],
-      ['Tools', '/tools'],
-      ['Nokturna', '/nokturna'],
       ['Cheats', '/cheats'],
       ['Download', '/download'],
       ['Discord', '/discord'],
+      ['Disclaimer', '/disclaimer'],
     ],
   },
 ] as const;
@@ -282,6 +356,61 @@ export function MoonlightPeaksHomePage({ locale }: { locale?: Locale }) {
       <Container className="px-4 py-12">
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_264px]">
           <div className="min-w-0 space-y-12">
+            <section>
+              <div className="flex flex-wrap items-end justify-between gap-4">
+                <div>
+                  <Badge className="bg-[#C77DFF] text-[#14091E]">
+                    Core database and tools
+                  </Badge>
+                  <h2 className="mt-4 font-display text-3xl font-black text-white">
+                    Open the data and trackers players need most.
+                  </h2>
+                </div>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-[#4B315F] bg-[#1D102A] text-[#F4EAFE] hover:bg-[#2B1838]"
+                >
+                  <LocaleLink href="/tools">
+                    All tools
+                    <ArrowRight className="size-4" />
+                  </LocaleLink>
+                </Button>
+              </div>
+
+              <div className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+                {coreDataTools.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <LocaleLink
+                      key={item.href}
+                      href={item.href}
+                      className="group grid min-h-[132px] grid-cols-[42px_minmax(0,1fr)] gap-3 rounded-lg border border-[#4B315F] bg-[#1D102A] p-4 transition hover:border-[#C77DFF] hover:bg-[#251334]"
+                    >
+                      <span className="flex size-10 items-center justify-center rounded-md border border-[#4B315F] bg-[#120719] text-[#C77DFF] transition group-hover:border-[#C77DFF]">
+                        <Icon className="size-5" />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="flex items-start justify-between gap-3">
+                          <span className="font-display text-lg font-bold text-white">
+                            {item.title}
+                          </span>
+                          <ArrowRight className="mt-1 size-4 shrink-0 text-[#C77DFF] transition group-hover:translate-x-1" />
+                        </span>
+                        <span className="mt-1 block text-[#5EE6D6] text-xs font-semibold uppercase tracking-[0.12em]">
+                          {item.meta}
+                        </span>
+                        <span className="mt-2 line-clamp-2 block text-[#DED2F6] text-sm leading-6">
+                          {item.body}
+                        </span>
+                      </span>
+                    </LocaleLink>
+                  );
+                })}
+              </div>
+            </section>
+
             <section className="grid grid-cols-1 gap-5 lg:grid-cols-2">
               <div className="rounded-lg border border-[#4B315F] bg-[#1D102A] p-5">
                 <div className="flex flex-wrap items-center justify-between gap-3">
@@ -293,14 +422,12 @@ export function MoonlightPeaksHomePage({ locale }: { locale?: Locale }) {
                       {content.currentFactsTitle}
                     </h2>
                   </div>
-                  <a
-                    href={siteFacts.officialWebsiteUrl}
-                    target="_blank"
-                    rel="noreferrer"
+                  <LocaleLink
+                    href="/download"
                     className="inline-flex items-center gap-1 text-[#DED2F6] text-sm hover:text-[#C77DFF]"
                   >
-                    Official <ExternalLink className="size-3.5" />
-                  </a>
+                    Download <ArrowRight className="size-3.5" />
+                  </LocaleLink>
                 </div>
                 <div className="mt-4 space-y-2">
                   {gameFacts.slice(0, 3).map((fact) => (
@@ -354,31 +481,56 @@ export function MoonlightPeaksHomePage({ locale }: { locale?: Locale }) {
               </div>
             </section>
 
-            <section className="grid grid-cols-1 gap-8 lg:grid-cols-[340px_minmax(0,1fr)]">
-              <div>
-                <Badge className="bg-[#C77DFF] text-[#14091E]">
-                  Quick routes
-                </Badge>
-                <h2 className="mt-4 font-display text-3xl font-black text-white">
-                  Choose the Moonlight Peaks page you need next.
-                </h2>
-                <p className="mt-4 text-sm leading-7 text-[#DED2F6]">
-                  The wiki is shaped around launch, platforms, demo, romance,
-                  farming, magic, Nokturna, safe cheats, official downloads, and
-                  first-week decisions.
+            <section>
+              <div className="flex flex-wrap items-end justify-between gap-4">
+                <div>
+                  <Badge className="bg-[#5EE6D6] text-[#14091E]">
+                    Quick routes
+                  </Badge>
+                  <h2 className="mt-4 font-display text-3xl font-black text-white">
+                    Choose the Moonlight Peaks page you need next.
+                  </h2>
+                </div>
+                <p className="max-w-xl text-sm leading-7 text-[#DED2F6]">
+                  Compact route groups keep the homepage scannable while still
+                  passing users into the main wiki clusters.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-3">
-                {keywordLinks.map(([label, href]) => (
-                  <Button
-                    key={label}
-                    asChild
-                    variant="outline"
-                    className="h-auto whitespace-normal border-[#4B315F] bg-[#1D102A] px-3 py-2 text-left text-[#F4EAFE] hover:border-[#C77DFF] hover:bg-[#2B1838]"
-                  >
-                    <LocaleLink href={href}>{label}</LocaleLink>
-                  </Button>
-                ))}
+
+              <div className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
+                {quickRouteGroups.map((group) => {
+                  const Icon = group.icon;
+
+                  return (
+                    <article
+                      key={group.title}
+                      className="rounded-lg border border-[#4B315F] bg-[#1D102A] p-4"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="flex size-8 items-center justify-center rounded-md bg-[#120719] text-[#C77DFF]">
+                          <Icon className="size-4" />
+                        </span>
+                        <h3 className="font-display text-lg font-bold text-white">
+                          {group.title}
+                        </h3>
+                      </div>
+                      <p className="mt-2 line-clamp-2 text-[#DED2F6] text-sm leading-6">
+                        {group.body}
+                      </p>
+                      <div className="mt-3 grid grid-cols-2 gap-2">
+                        {group.links.map(([label, href]) => (
+                          <LocaleLink
+                            key={href}
+                            href={href}
+                            className="min-w-0 rounded-md border border-[#4B315F] bg-[#120719] px-2.5 py-2 text-[#F4EAFE] text-sm leading-5 transition hover:border-[#C77DFF] hover:bg-[#2B1838]"
+                          >
+                            {label}
+                          </LocaleLink>
+                        ))}
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             </section>
 
