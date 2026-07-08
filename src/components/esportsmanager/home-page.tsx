@@ -469,15 +469,15 @@ export function EsportsManagerHomePage({ locale }: { locale?: Locale }) {
               </div>
             </section>
 
-            <section className="grid gap-4 lg:grid-cols-2">
+            <section className="grid gap-4">
               <div className="rounded-lg border border-[#1F3A4A] bg-[#0E1B27] p-5">
                 <div className="flex gap-3">
                   <BarChart3 className="mt-1 size-5 shrink-0 text-[#59D6FF]" />
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h2 className="font-display text-2xl font-bold">
                       {content.currentFactsTitle}
                     </h2>
-                    <div className="mt-4 grid gap-3">
+                    <div className="mt-4 grid gap-3 md:grid-cols-2">
                       {gameFacts.map((fact) => (
                         <div
                           key={fact.label}
@@ -499,11 +499,11 @@ export function EsportsManagerHomePage({ locale }: { locale?: Locale }) {
               <div className="rounded-lg border border-[#1F3A4A] bg-[#0E1B27] p-5">
                 <div className="flex gap-3">
                   <BadgeDollarSign className="mt-1 size-5 shrink-0 text-[#FF8A3D]" />
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h2 className="font-display text-2xl font-bold">
                       {content.findPageTitle}
                     </h2>
-                    <div className="mt-4 grid gap-2">
+                    <div className="mt-4 grid gap-2 md:grid-cols-2">
                       {content.coreRouteItems.map((item) =>
                         item.route === 'none' ? null : (
                           <LocaleLink
@@ -511,11 +511,13 @@ export function EsportsManagerHomePage({ locale }: { locale?: Locale }) {
                             href={item.route}
                             className="rounded-md border border-[#1F3A4A] bg-[#061018] p-3 text-sm transition hover:border-[#59D6FF]"
                           >
-                            <span className="font-semibold text-[#F4FAFF]">
-                              {item.keyword}
-                            </span>
-                            <span className="ml-2 text-[#59D6FF]">
-                              {item.label}
+                            <span className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                              <span className="font-semibold text-[#F4FAFF]">
+                                {item.keyword}
+                              </span>
+                              <span className="text-[#59D6FF]">
+                                {item.label}
+                              </span>
                             </span>
                             <p className="mt-1 leading-6 text-[#BED3E0]">
                               {item.intent}
