@@ -1,13 +1,13 @@
-# Esports Manager 2026 Wiki
+# Cursed Companions Wiki
 
-Independent guide site for Esports Manager 2026 at `https://www.esportsmanager.wiki`.
+English guide hub for Cursed Companions at `https://www.cursedcompanions.wiki`.
 
 ## Scope
 
-- Launch-week wiki hub for the esports management sim by Neurona Games, published by indie.io.
-- Core pages for beginner guide, organization setup, scouting, transfers, contracts, training, morale, tactics, tournaments, sponsors, release date, demo, platforms, Steam Deck, EMDB, review, download, Discord, and legal/disclaimer.
-- Source-aware guide articles with official links, YouTube-supported decision notes, Google autocomplete demand, and EMDB safety guidance.
-- No fake codes page, tier list, APK mirror, cracked client, trainer download, save editor, or unverified hard-value tables.
+- Version 1.0 and Act III coverage for the voice-controlled co-op horror game by Crimson Forge Studios.
+- High-intent pages for beginner routes, forbidden words, spells, microphone fixes, monsters, game modes, skin codes, respawns, player limits, platforms, Steam Deck, official download, and community links.
+- Original, decision-first guides built from official Steam, website, FAQ, announcements, press-kit media, current YouTube context, and Serper long-tail discovery.
+- No fake tier list, APK mirror, crack, key generator, cheat, script, modified client, or unverified complete database.
 
 ## Development
 
@@ -22,14 +22,13 @@ pnpm build
 Canonical domain:
 
 ```txt
-https://www.esportsmanager.wiki
+https://www.cursedcompanions.wiki
 ```
 
-## Source Rules
+## Source rules
 
-- Prefer official Esports Manager 2026, Steam, Neurona Games, indie.io, official community, EMDB, and YouTube sources.
-- Use community pages and competitor results as public fact leads with source URLs and confidence labels; do not copy competitor prose or images.
-- Use YouTube videos as cross-checks and covers, not as copied article bodies.
-- Treat ratings, player data, contract values, and tactic recommendations as launch-week evolving data until live-game verification is stable.
-- Keep mobile, console, mods, cheats, and codes terms as watch/ignore unless official evidence appears.
-- Avoid unsafe downloads, APK mirrors, trainers, scripts, modified clients, and fake code generators.
+- Prefer Crimson Forge Studios, Steam, the official FAQ, Steam announcements, and the official Discord for live facts.
+- Use YouTube as visual and gameplay context, not as article text to copy.
+- Keep codes labeled by evidence: officially published is not the same as re-tested after every patch.
+- Treat price, discount, platform support, live player counts, and post-launch mechanics as time-sensitive.
+- Use official distribution only and keep unsafe download intent on the safe Steam route.

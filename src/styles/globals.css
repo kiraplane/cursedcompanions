@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Esports Manager 2026 - competitive management guide theme */
+/* Cursed Companions - voice-controlled comedy horror guide theme */
 
 :root {
   --font-noto-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -258,46 +258,46 @@
 }
 
 :root {
-  --background: #0a0f0c;
-  --foreground: #f7e8c9;
-  --card: #111612;
-  --card-foreground: #f7e8c9;
-  --popover: #111612;
-  --popover-foreground: #f7e8c9;
+  --background: #061313;
+  --foreground: #f7f2df;
+  --card: #0c2222;
+  --card-foreground: #f7f2df;
+  --popover: #0c2222;
+  --popover-foreground: #f7f2df;
 
-  --primary: #d9b56a;
-  --primary-foreground: #15110b;
+  --primary: #ff3d78;
+  --primary-foreground: #ffffff;
 
-  --secondary: #6ea69a;
-  --secondary-foreground: #0a0f0c;
+  --secondary: #d989ff;
+  --secondary-foreground: #08170e;
 
-  --muted: #141916;
-  --muted-foreground: #c7baa7;
+  --muted: #102c2c;
+  --muted-foreground: #afc8c0;
 
-  --accent: #201418;
-  --accent-foreground: #f7e8c9;
+  --accent: #26121d;
+  --accent-foreground: #f7f2df;
 
-  --destructive: #b5444f;
-  --destructive-foreground: #fff2e0;
+  --destructive: #ff3d78;
+  --destructive-foreground: #ffffff;
 
-  --border: #493a34;
-  --input: #493a34;
-  --ring: #d9b56a;
+  --border: #28484a;
+  --input: #365f61;
+  --ring: #d989ff;
 
-  --chart-1: #d9b56a;
-  --chart-2: #6ea69a;
-  --chart-3: #b5444f;
-  --chart-4: #7b2635;
-  --chart-5: #f7e8c9;
+  --chart-1: #ff3d78;
+  --chart-2: #7cff6b;
+  --chart-3: #d989ff;
+  --chart-4: #38bfc5;
+  --chart-5: #f7f2df;
 
-  --sidebar: #0a0f0c;
-  --sidebar-foreground: #f7e8c9;
-  --sidebar-primary: #d9b56a;
-  --sidebar-primary-foreground: #15110b;
-  --sidebar-accent: #141916;
-  --sidebar-accent-foreground: #f7e8c9;
-  --sidebar-border: #493a34;
-  --sidebar-ring: #d9b56a;
+  --sidebar: #061313;
+  --sidebar-foreground: #f7f2df;
+  --sidebar-primary: #ff3d78;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #102c2c;
+  --sidebar-accent-foreground: #f7f2df;
+  --sidebar-border: #28484a;
+  --sidebar-ring: #d989ff;
   --font-sans: var(--font-noto-sans);
   --font-serif: var(--font-noto-serif);
   --font-mono: var(--font-noto-sans-mono);
@@ -383,11 +383,11 @@ body {
 }
 
 /*
- * Esports Manager 2026 theme colors
+ * Cursed Companions theme colors
  */
 .theme-default {
-  --primary: #e3483b;
-  --primary-foreground: #170b0a;
+  --primary: #ff3d78;
+  --primary-foreground: #ffffff;
 }
 
 .theme-blue {

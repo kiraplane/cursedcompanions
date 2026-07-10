@@ -1,11 +1,11 @@
 {
-  "name": "Esports Manager 2026 Wiki",
-  "short_name": "EM2026 Wiki",
-  "description": "Esports Manager 2026 wiki for beginner guides, tactics, scouting, transfers, contracts, training, sponsors, EMDB, Steam, demo, and safe links.",
+  "name": "Cursed Companions Wiki",
+  "short_name": "CC Wiki",
+  "description": "Cursed Companions wiki for voice spells, monsters, codes, multiplayer modes, mic fixes, respawns, and the Act III route.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#061018",
-  "theme_color": "#59D6FF",
+  "background_color": "#061313",
+  "theme_color": "#FF3D78",
   "icons": [
     {
       "src": "/favicon-32x32.png",

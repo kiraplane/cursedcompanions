@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "Esports Manager 2026",
-    "title": "Esports Manager 2026 Wiki - Guides, Tactics, EMDB and Steam",
-    "description": "Esports Manager 2026 wiki for beginner guides, tactics, scouting, transfers, contracts, training, sponsors, EMDB, Steam, demo, and safe links."
+    "name": "Cursed Companions Wiki",
+    "title": "Cursed Companions Wiki - Monsters, Words, Codes and Guides",
+    "description": "Cursed Companions wiki for voice spells, monsters, codes, multiplayer modes, mic fixes, respawns, and the Act III route."
   },
   "Common": {
     "premium": "Premium",
@@ -54,7 +54,7 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping Esports Manager 2026 Wiki maintained",
+    "description": "Optional supporter plans for keeping Cursed Companions Wiki maintained",
     "subtitle": "Simple support options for readers who want to help maintain current guides and hosting",
     "monthly": "Monthly",
     "yearly": "Yearly",
@@ -80,11 +80,11 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse Esports Manager 2026 Wiki with no payment required",
+      "description": "Browse Cursed Companions Wiki with no payment required",
       "features": {
         "feature-1": "Launch, platform, demo, and official-link guidance",
         "feature-2": "Beginner, scouting, contracts, training, tactics, tournaments, and sponsor guides",
-        "feature-3": "Steam, demo, EMDB, Steam Deck, download, Discord, and safety pages",
+        "feature-3": "Steam, demo, Monster List, Steam Deck, download, Discord, and safety pages",
         "feature-4": "Guide pages updated as sources change"
       },
       "limits": {
@@ -113,7 +113,7 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of Esports Manager 2026 Wiki maintenance",
+      "description": "For heavier support of Cursed Companions Wiki maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
@@ -297,7 +297,7 @@
         "title": "Platforms"
       },
       "database": {
-        "title": "EMDB"
+        "title": "Monster List"
       },
       "tools": {
         "title": "Tactics"
@@ -322,7 +322,7 @@
       }
     },
     "footer": {
-      "tagline": "Independent Esports Manager 2026 wiki for Steam launch setup, scouting, contracts, tactics, EMDB, demo, and safe links.",
+      "tagline": "Voice-first Cursed Companions guides for monsters, forbidden words, modes, codes, mic fixes, respawns, and Act III.",
       "start": {
         "title": "Start",
         "items": {
@@ -348,7 +348,7 @@
       "database": {
         "title": "Data",
         "items": {
-          "all": "EMDB Guide",
+          "all": "Monster List Guide",
           "characters": "Create Org",
           "families": "Scouting",
           "locations": "Contracts",

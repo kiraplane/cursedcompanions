@@ -23,12 +23,12 @@ import type { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: defaultMessages.Metadata.name,
-    short_name: 'EM2026 Wiki',
+    short_name: 'CC Wiki',
     description: defaultMessages.Metadata.description,
     start_url: '/',
     display: 'standalone',
-    background_color: '#061018',
-    theme_color: '#59D6FF',
+    background_color: '#061313',
+    theme_color: '#FF3D78',
     icons: [
       {
         src: '/favicon-32x32.png',

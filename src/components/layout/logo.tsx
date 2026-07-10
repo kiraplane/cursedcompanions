@@ -6,11 +6,11 @@ import Image from 'next/image';
 export function Logo({ className }: { className?: string }) {
   return (
     <span
-      aria-label="Esports Manager 2026 logo"
-      title="Esports Manager 2026"
+      aria-label="Cursed Companions Wiki logo"
+      title="Cursed Companions Wiki"
       className={cn(
-        'relative inline-flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-md',
-        'border border-[#59D6FF]/60 bg-[#061018] shadow-[0_0_30px_rgba(89,214,255,0.2)]',
+        'relative inline-flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-md',
+        'bg-[#061313] shadow-[0_0_24px_rgba(255,61,120,0.24)]',
         className
       )}
     >
@@ -18,7 +18,7 @@ export function Logo({ className }: { className?: string }) {
         src="/android-chrome-192x192.png"
         alt=""
         fill
-        sizes="44px"
+        sizes="36px"
         className="object-cover"
       />
     </span>

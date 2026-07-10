@@ -17,7 +17,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer
       className={cn(
-        'border-[#1F3A4A] border-t bg-[#061018] text-[#EAF7FF]',
+        'border-[#28484A] border-t bg-[#061313] text-[#F7F2DF]',
         className
       )}
     >
@@ -48,7 +48,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={link.title}
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#1F3A4A] text-[#A8C7D8] hover:border-[#59D6FF] hover:bg-[#0E1B27] hover:text-[#EAF7FF]"
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#28484A] text-[#AFC8C0] hover:border-[#D989FF] hover:bg-[#0C2222] hover:text-[#F7F2DF]"
                     >
                       <span className="sr-only">{link.title}</span>
                       {link.icon ? link.icon : null}
@@ -123,17 +123,16 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
         </div>
       </Container>
 
-      <div className="border-[#1F3A4A] border-t py-8">
+      <div className="border-[#28484A] border-t py-8">
         <Container className="px-4 flex items-center justify-between gap-x-4">
           <span className="text-muted-foreground text-sm">
             &copy; {new Date().getFullYear()} {t('Metadata.name')} All Rights
             Reserved.
           </span>
 
-          <span className="text-muted-foreground text-sm">
-            Independent Esports Manager 2026 guide site. Not affiliated with
-            Neurona Games, indie.io, Valve, Steam, Discord, Reddit, X, YouTube,
-            or EMDB.
+          <span className="text-muted-foreground text-right text-sm">
+            Voice-first guides for version 1.0. See the disclaimer for source
+            and affiliation details.
           </span>
         </Container>
       </div>
