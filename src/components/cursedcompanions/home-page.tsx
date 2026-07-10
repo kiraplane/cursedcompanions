@@ -382,57 +382,53 @@ export function CursedCompanionsHomePage({ locale }: { locale?: Locale }) {
               </div>
             </section>
 
-            <section className="grid gap-4 lg:grid-cols-2">
+            <section className="space-y-4">
               <div className="rounded-lg border border-[#28484A] bg-[#0C2222] p-5">
-                <div className="flex gap-3">
-                  <Sparkles className="mt-1 size-5 shrink-0 text-[#D989FF]" />
-                  <div className="min-w-0 flex-1">
-                    <h2 className="font-display text-2xl font-bold">
-                      {content.currentFactsTitle}
-                    </h2>
-                    <div className="mt-4 grid gap-3">
-                      {gameFacts.map((fact) => (
-                        <div
-                          key={fact.label}
-                          className="rounded-md border border-[#28484A] bg-[#061313] p-3"
-                        >
-                          <p className="text-sm font-semibold text-[#7CFF6B]">
-                            {fact.label}
-                          </p>
-                          <p className="mt-1 text-sm leading-6 text-[#AFC8C0]">
-                            {fact.value}
-                          </p>
-                        </div>
-                      ))}
+                <div className="flex items-center gap-3">
+                  <Sparkles className="size-5 shrink-0 text-[#D989FF]" />
+                  <h2 className="font-display text-2xl font-bold">
+                    {content.currentFactsTitle}
+                  </h2>
+                </div>
+                <div className="mt-4 grid gap-3 md:grid-cols-2">
+                  {gameFacts.map((fact) => (
+                    <div
+                      key={fact.label}
+                      className="rounded-md border border-[#28484A] bg-[#061313] p-3"
+                    >
+                      <p className="text-sm font-semibold text-[#7CFF6B]">
+                        {fact.label}
+                      </p>
+                      <p className="mt-1 text-sm leading-6 text-[#AFC8C0]">
+                        {fact.value}
+                      </p>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
               <div className="rounded-lg border border-[#28484A] bg-[#0C2222] p-5">
-                <div className="flex gap-3">
-                  <BookOpen className="mt-1 size-5 shrink-0 text-[#FF3D78]" />
-                  <div className="min-w-0 flex-1">
-                    <h2 className="font-display text-2xl font-bold">
-                      {content.findPageTitle}
-                    </h2>
-                    <div className="mt-4 grid gap-2 sm:grid-cols-2">
-                      {content.coreRouteItems.map((item) => (
-                        <LocaleLink
-                          key={`${item.keyword}-${item.route}`}
-                          href={item.route}
-                          className="min-w-0 rounded-md border border-[#28484A] bg-[#061313] p-3 text-sm transition hover:border-[#D989FF]"
-                        >
-                          <span className="block min-w-0 break-words font-semibold text-[#F7F2DF]">
-                            {item.keyword}
-                          </span>
-                          <span className="mt-1 block text-xs leading-5 text-[#AFC8C0]">
-                            {item.label}
-                          </span>
-                        </LocaleLink>
-                      ))}
-                    </div>
-                  </div>
+                <div className="flex items-center gap-3">
+                  <BookOpen className="size-5 shrink-0 text-[#FF3D78]" />
+                  <h2 className="font-display text-2xl font-bold">
+                    {content.findPageTitle}
+                  </h2>
+                </div>
+                <div className="mt-4 grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
+                  {content.coreRouteItems.map((item) => (
+                    <LocaleLink
+                      key={`${item.keyword}-${item.route}`}
+                      href={item.route}
+                      className="min-w-0 rounded-md border border-[#28484A] bg-[#061313] p-3 text-sm transition hover:border-[#D989FF]"
+                    >
+                      <span className="block min-w-0 break-words font-semibold text-[#F7F2DF]">
+                        {item.keyword}
+                      </span>
+                      <span className="mt-1 block text-xs leading-5 text-[#AFC8C0]">
+                        {item.label}
+                      </span>
+                    </LocaleLink>
+                  ))}
                 </div>
               </div>
             </section>
