@@ -8,7 +8,7 @@ export const redeemCodes: RedeemCode[] = [
     sourceUrl:
       'https://steamcommunity.com/app/3265230/announcements/detail/492116141703682074',
     publishedAt: '2025-11-20',
-    checkedAt: '2026-07-11',
+    checkedAt: '2026-07-14',
     note: 'Published by the developer for the Early Access launch. Source-checked, not re-tested in game after the July 2026 full release.',
   },
 ];
