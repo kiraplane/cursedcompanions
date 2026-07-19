@@ -6,7 +6,6 @@
   "preview_urls": true,
   "keep_vars": true,
   "vars": {
-    "ADSTERRA_ADS_ENABLED": "false",
     "NEXT_PUBLIC_BASE_URL": "https://www.cursedcompanions.wiki",
     "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID": "G-H1JKBHH2VX"
   },
@@ -25,7 +24,7 @@
     }
   ],
   "build": {
-    "command": "ADSTERRA_ADS_ENABLED=false pnpm run cf:build"
+    "command": "pnpm run cf:build"
   },
   "assets": {
     "directory": ".open-next/assets",
