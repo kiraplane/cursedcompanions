@@ -167,7 +167,7 @@ export function CursedCompanionsHomePage({ locale }: { locale?: Locale }) {
         name: homeTrailer.title,
         thumbnailUrl: homeTrailer.thumbnailUrl,
         embedUrl: homeTrailer.embedUrl,
-        uploadDate: '2026-06-29',
+        uploadDate: '2026-06-25',
       },
     ],
   };
