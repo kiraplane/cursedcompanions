@@ -19,7 +19,7 @@ const coreRoutes = [
 const allRoutes = [
   ...new Set([...coreRoutes, ...guides.map((guide) => guide.path)]),
 ];
-const stableLastModified = new Date('2026-08-03T00:00:00.000Z');
+const stableLastModified = new Date('2026-08-04T00:00:00.000Z');
 const priorityRoutes = new Set([
   Routes.Root,
   Routes.Guides,
